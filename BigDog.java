@@ -17,7 +17,7 @@ public class BigDog extends Character{
         defense *= 2.0;
     }
 
-    public static String about(){
+    public String about(){
         String retVal = "";
 	retVal += "Class: " + getClass() + "\n";
 	retVal += "Name: " + getName() + "\n";

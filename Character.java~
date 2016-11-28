@@ -102,5 +102,5 @@ y
       preconds: takes a Character
       postconds: returns the name and values of the Character's attributes in a string
      */
-    public abstract String about();
+    public abstract static String about();
 }

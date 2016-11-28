@@ -1,22 +1,23 @@
-public class Rogue extends Character{
-    public Rogue(String naming){
+public class BigDog extends Character{
+    public BigDog(String naming){
 	name = naming;
-	health = 75;
-	strength = 200;
+	health = 150;
+	strength = 125;
 	defense = 30;
-	attack = 0.6;
+	attack = 0.4;
     }
+
+    //specialize() overriden
     public void specialize(){
-        attack *= 1.2;
-        defense /= 1.2;
+	attack *= 2.0;
+	defense /= 2.0;
     }
-
     public void normalize(){
-        attack /= 1.2;
-        defense *= 1.2;
+        attack /= 2.0;
+        defense *= 2.0;
     }
 
-    public String about(){
+    public static String about(){
         String retVal = "";
 	retVal += "Class: " + getClass() + "\n";
 	retVal += "Name: " + getName() + "\n";

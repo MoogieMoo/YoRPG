@@ -17,7 +17,7 @@ public class Sorcerer extends Character{
         defense *= 1.2;
     }
 
-    public static String about(){
+    public String about(){
         String retVal = "";
 	retVal += "Class: " + getClass() + "\n";
 	retVal += "Name: " + getName() + "\n";

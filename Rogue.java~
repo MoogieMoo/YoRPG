@@ -16,7 +16,7 @@ public class Rogue extends Character{
         defense *= 1.2;
     }
 
-    public String about(){
+    public static String about(){
         String retVal = "";
 	retVal += "Class: " + getClass() + "\n";
 	retVal += "Name: " + getName() + "\n";
