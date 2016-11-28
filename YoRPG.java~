@@ -65,70 +65,37 @@ public class YoRPG
 	}
 	catch ( IOException e ) { }
 
+	s = "Intrepid warrior, what doth thy call thyself? (State your name): ";
+	System.out.print( s );
+
+	try {
+	    name = in.readLine();
+	}
+	catch ( IOException e ) { }
+
 	//instantiate the player's character
-	int charac = 0;
-	
-	    System.out.println( "\n Choose your character" );
-	    System.out.println( "\t1: Warrior.\n\t2: Mage.\n\t3: Rogue.\n\t4: Sorcerer.\n\t5: Big Dog.\n" );
-
-	    try {
-	   charac = Integer.parseInt( in.readLine() );
-	}
-	catch (IOException e ) { }
-
-
-	if ( charac == 1) {
-	    s = "Intrepid warrior, what doth thy call thyself? (State your name): ";
-	    System.out.print( s );
-
-	    try {
-	    name = in.readLine();
-	    }
-	    catch ( IOException e ) { }
-	    
-	    //instantiate the player's character
-	    pat = new Warrior( name );
-	}
-	else if ( charac == 2) {
-	    s = "Intrepid mage, what doth thy call thyself? (State your name): ";
-	    System.out.print( s );
-	    
-	    try {
-	    name = in.readLine();
-	    }
-	    catch ( IOException e ) { }
-	    pat = new Mage( name );
-	}
-	else if ( charac == 3) {
-	    s = "Intrepid rogue, what doth thy call thyself? (State your name): ";
-	    System.out.print( s );
-
-	    try {
-	    name = in.readLine();
-	    }
-	    catch ( IOException e ) { }
-	    pat = new Rogue( name );
-	}
-	else if ( charac == 4) {
-	    s = "Intrepid Sorcerer, what doth thy call thyself? (State your name): ";
-	    System.out.print( s );
-
-	    try {
-	    name = in.readLine();
-	    }
-	    catch ( IOException e ) { }
-	    pat = new Sorcerer( name );
-	}
-	else if ( charac == 5) {
-	    s = "Intrepid Big Dog, what doth thy call thyself? (State your name): ";
-	    System.out.print( s );
-
-	    try {
-	    name = in.readLine();
-	    }
-	    catch ( IOException e ) { }
-	    pat = new BigDog( name );
-	}
+	int i = 0;
+    try{
+	System.out.println( "\nWhat kind of Character do you want?" );
+        System.out.println( "\t1: Warrior.\n\t2: Mage.\n\t3: Rogue.\n\t4: Sorcerer.\n\t5: Big Dog.\n" );
+        i = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+    if (i == 1){
+	pat = new Warrior( name );   //Is it man or woman?
+    }
+    else if (i == 2){
+	pat = new Mage( name );
+    }
+    else if (i == 3){
+	pat = new Rogue( name );
+    }
+    else if (i == 4){
+	pat = new Sorcerer( name );
+    }
+    else{
+	pat = new BigDog( name );
+    }
     }//end newGame()
 
 
@@ -180,8 +147,8 @@ public class YoRPG
 	    //option 1: you & the monster perish
 	    if ( !smaug.isAlive() && !pat.isAlive() ) {
 		System.out.println( "'Twas an epic battle, to be sure... " + 
-				    "You cut ye olde monster down, but " +
-				    "with its dying breath ye olde monster. " +
+				            "You cut ye olde monster down, but " +
+				            "with its dying breath ye olde monster. " +
 				    "laid a fatal blow upon thy skull." );
 		return false;
 	    }
