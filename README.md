@@ -6,15 +6,35 @@ LlamaGoats - Maggie, Kelly, Dimitri
 
 Players can choose:
 
-Warrior
+Warrior - 
+	health = 125;
+	strength = 100;
+	defense = 40;
+	attack = 0.4;
 
-Mage
+Mage - 
+	health = 125;
+	strength = 100;
+	defense = 40;
+	attack = 0.4;
 
-Rogue
+Rogue -
+	health = 75;
+	strength = 200;
+	defense = 30;
+	attack = 0.6;
 
-Sorcerer
+Sorcerer - 
+	health = 125;
+	strength = 85;
+	defense = 35;
+	attack = 0.4;
 
-Big Dog
+Big Dog - 
+	health = 150;
+	strength = 125;
+	defense = 30;
+	attack = 0.4;
 
 The antagonist is the Monster.
 
@@ -28,3 +48,4 @@ The game is over when all the monsters are killed, or when you are killed.
 
 Feature Additions:
 Specialize is super special :)
+Each class has its own special stats.
